@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Netflix</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+    </header>
+
+    <main>
+        <section aria-labelledby="profiles-title">
+            <h2 id="profiles-title">Quem está assistindo?</h2>
+
+            <div class="profiles">
+                <article class="profile">
+                    <a href="netflix-plataform-main/catalogo/catalogo.html" onclick="abrirPerfil('Diana', 'assets/diana - 1.jpg')" class="perfil">
+                        <figure>
+                            <img src="assets/diana - 1.jpg" alt="Diana usa uma roupa de guerreira acrobata, com botas altas, saia resistente e seu bastão mágico" />
+                            <figcaption>Diana</figcaption>
+                        </figure>
+                    </a>
+                </article>
+
+                <article class="profile">
+                    <figure>
+                        <img src="assets/sheila 8.jpg" alt="Com sua capa de invisibilidade e roupas leves, Sheila se veste como uma ladina ágil — feita para se esconder, se mover rápido e agir sem ser vista." />
+                        <figcaption>Sheila</figcaption>
+                    </figure>
+                </article>
+
+                <article class="profile">
+                    <figure>
+                        <img src="assets/bobby-caverna-do-dragao - 6.jpg" alt="Usando roupas simples, botas pesadas e carregando seu porrete mágico, Bobby tem o visual de um pequeno bárbaro — um guerreiro bruto, mas com coração gigante" />
+                        <figcaption>Bobby</figcaption>
+                    </figure>
+                </article>
+
+                <article class="profile">
+                    <figure>
+                        <img src="assets/hank-7.jpeg" alt="Com sua capa resistente, botas de combate e arco sempre pronto, Hank veste-se como um verdadeiro líder guerreiro — cada peça do seu traje foi feita para proteger e guiar o grupo nas batalhas" />
+                        <figcaption>Hank</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>  
+    </main>
+
+    <footer>
+        <p>© 2026 Netflix, Inc.</p>
+    </footer>
+    <!-- Script inline para função de perfil -->
+    <script>
+        /**
+         * Função para salvar dados do perfil ao clicar
+         * @param {string} nome - Nome do perfil
+         * @param {string} imagemSrc - URL da imagem do perfil
+         */
+        function abrirPerfil(nome, imagemSrc) {
+            localStorage.setItem('perfilAtivoNome', nome); /* Salva nome do perfil */
+            localStorage.setItem('perfilAtivoImagem', imagemSrc); /* Salva URL da imagem */
+            console.log(`Perfil "${nome}" salvo no localStorage`); /* Log para confirmação */
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
